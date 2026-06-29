@@ -6,6 +6,21 @@
   display: flex;
   flex-direction: column;
 }
+* {
+  box-sizing: border-box;
+}
+button:hover {
+  border: 3px solid #ffe27f;
+}
+.card {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+h1 {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+a {
+  cursor: pointer;
+}
 .container {
   background-image: url("./HeroImage.png");
   width: 1440px;
@@ -73,7 +88,7 @@
   text-align: center;
 }
 .images-container {
-  background-image: url("./Location image.png");
+  background-image: url("./Location\ image\ \(1\).png");
   width: 1440px;
   height: 512px;
   display: flex;
@@ -109,6 +124,7 @@
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
   background-image: url("./1.png");
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 .lake:nth-child(2) {
   display: flex;
@@ -126,6 +142,7 @@
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
   background-image: url("./2.png");
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 .lake:nth-child(3) {
   display: flex;
@@ -143,6 +160,7 @@
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
   background-image: url("./3.png");
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 .lake:nth-child(4) {
   display: flex;
@@ -160,26 +178,153 @@
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
   background-image: url("./4.png");
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 .roadmap {
-  background-image: url("./Roadmap\ image\ \(1\).png");
+  background-image: url("./roadmap\ image-\(1\).png");
   width: 1440px;
   height: 1022px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.roadmap-box {
-  width: 1200px;
-  height: 640px;
-  display: flex;
-  gap: 40px;
-}
-.black-box {
   position: relative;
 }
-.circle {
+.roadmap-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.roadmap-title {
+  font-weight: 600;
+  font-size: 42px;
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+.roadmap-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+.location-box {
+  width: 513px;
+  height: 640px;
+  left: 190px;
+  top: 240px;
+  position: relative;
+  top: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.location-child:nth-child(1) {
+  width: 513px;
+  height: 112px;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  background-image: url("./container-\(4\).png");
+}
+.location-child:nth-child(2) {
+  width: 513px;
+  height: 112px;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  background-image: url("./container-\(5\).png");
+}
+.location-child:nth-child(3) {
+  width: 513px;
+  height: 112px;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  background-image: url("./container-\(1\).png");
+}
+.location-child:nth-child(4) {
+  width: 513px;
+  height: 112px;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  background-image: url("./container-\(2\).png");
+}
+.location-child:nth-child(5) {
+  width: 513px;
+  height: 112px;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  background-image: url("./container-\(3\).png");
+}
+.circle-1 {
   position: absolute;
-  top: x;
-  right: 22px;
+  top: 181px;
+  left: 492px;
+  opacity: 0;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+}
+.circle-2 {
+  position: absolute;
+  top: 290px;
+  left: 819px;
+  opacity: 0;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+}
+.circle-3 {
+  position: absolute;
+  top: 428px;
+  left: 626px;
+  opacity: 0;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+}
+.circle-4 {
+  position: absolute;
+  top: 180px;
+  left: 652px;
+  opacity: 0;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+}
+.circle-5 {
+  position: absolute;
+  top: 184px;
+  left: 819px;
+  opacity: 0;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+}
+.location-box:has(.location-child:nth-child(1):hover) .circle-1 {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.location-box:has(.location-child:nth-child(2):hover) .circle-2 {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.location-box:has(.location-child:nth-child(3):hover) .circle-3 {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.location-box:has(.location-child:nth-child(4):hover) .circle-4 {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.location-box:has(.location-child:nth-child(5):hover) .circle-5 {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.price-footer {
+  width: 1440px;
+  height: 1120px;
+  background-image: url("./Price&Footer\ image\ \(1\).png");
 }
